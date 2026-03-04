@@ -4,7 +4,7 @@
     "version": "1.0.0",
     "description": "An extension to directly import NetNutrition data into custom foods in Cronometer.",
     "icons": {
-        "32": "images/icon32.png"
+        "32": "./icons/icon32.png"
     },
     "background": {
         "service_worker": "background.js"
@@ -34,6 +34,6 @@
     "permissions": ["tabs"],
     "action": {
         "default_popup": "popup.html",
-        "default_icon": "icon32.png"
+        "default_icon": "./icons/icon32.png"
     }
 }
