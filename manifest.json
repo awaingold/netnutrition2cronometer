@@ -11,20 +11,13 @@
     },
     "content_scripts": [
         {
-        "js": [
-            "scrapeNutrition.js"
-        ],
-        "matches": [
-            "*://*.uw.edu/*"
-        ]
+            "js": ["scrapeNutrition.js"],
+            "matches": ["*://nutrition.hfs.uw.edu/*"]
         },
         {
-        "js": [
-            "setNutrient.js"
-        ],
-        "matches": [
-            "*://*.cronometer.com/*"
-        ]
+            "js": ["setNutrient.js"],
+            "matches": ["*://cronometer.com/*", "*://*.cronometer.com/*"],
+            "run_at": "document_start"
         }
     ],
     "host_permissions": [

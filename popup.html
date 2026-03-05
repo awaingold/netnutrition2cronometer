@@ -14,18 +14,12 @@
             border-radius: 10%;
         }
     </style>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const importButton = document.getElementById("importButton");
-            importButton.addEventListener( "click", () => {
-                chrome.runtime.sendMessage({ type: 'START_IMPORT' });
-            });
-        });
-    </script>
+    <script src = "popup.js"></script>
 </head>
 <body>
     <div class = "outer">
         <h3 id = "title">NetNutrition2Cronometer</h3>
         <button id = "importButton"><strong>Import Nutrition</strong></button>
+        <p id = "status"></p>
     </div>
 </body>
