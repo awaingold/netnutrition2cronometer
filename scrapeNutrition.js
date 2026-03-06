@@ -31,6 +31,7 @@ function scrapeNutrition() {
     .map(row => Array.from(row.querySelectorAll('span')).map(span => span.innerText))
     .map(text => [text[0], parseFloat(text[1])]);
     const nutrition = Object.fromEntries(pairs);
+    nutrition['Food Name'] = rows[0].innerText;
     const calorieDiv = document.querySelector('.inline-div-right.bold-text.font-22');
     nutrition['Calories'] = parseFloat(calorieDiv.textContent);
     const addedSugarsSpan = rows.find(row => row.textContent.includes('Added Sugars')).querySelector("span");

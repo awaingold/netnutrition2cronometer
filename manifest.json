@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "NetNutrition2Cronometer",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "An extension to directly import NetNutrition data into custom foods in Cronometer.",
     "icons": {
         "32": "./icons/icon32.png"
@@ -15,7 +15,7 @@
             "matches": ["*://nutrition.hfs.uw.edu/*"]
         },
         {
-            "js": ["setNutrient.js"],
+            "js": ["setInformation.js"],
             "matches": ["*://cronometer.com/*", "*://*.cronometer.com/*"],
             "run_at": "document_start"
         }

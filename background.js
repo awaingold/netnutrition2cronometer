@@ -4,7 +4,7 @@
  */
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     async function handle() {
-        const UWTab = await chrome.tabs.query({ url: '*://*.uw.edu/*' });
+        const UWTab = await chrome.tabs.query({ url: '*://nutrition.hfs.uw.edu/*' });
         const CronometerTab = await chrome.tabs.query({ url: '*://cronometer.com/*' });
         if (UWTab.length === 0) {
             return {status: "no_data"};
